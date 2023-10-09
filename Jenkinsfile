@@ -6,8 +6,8 @@ pipeline{
 
         stage("Compile File"){
             steps{
+                javac demo.java
                 echo "compilation complete"
-                sh 'javac demo.java'
             }
         }
 
@@ -19,8 +19,8 @@ pipeline{
 
         stage("Build File"){
             steps{
+                java demo
                 echo "Build File"
-                sh 'java demo'
             }
         }
     }
