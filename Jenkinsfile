@@ -5,8 +5,7 @@ pipeline{
     stages{
 
         stage("Compile File"){
-            steps{
-                javac demo.java
+            steps{               
                 echo "compilation complete"
             }
         }
@@ -19,7 +18,6 @@ pipeline{
 
         stage("Build File"){
             steps{
-                java demo
                 echo "Build File"
             }
         }
