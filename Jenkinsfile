@@ -1,26 +1,24 @@
-Pipeline {
+pipeline{
 
     agent any
 
-    Stages {
+    stages{
 
-        Stage("Compile File") {
-            Steps {
+        stage("Compile File"){
+            steps{
                 echo "compilation complete"
-                javac demo.java
             }
         }
 
-        Stage("Test Files") {
-            Steps {
+        stage("Test Files"){
+            steps{
                 echo "Testing File Completed"
             }
         }
 
-        Stage("Build File") {
-            Steps {
+        stage("Build File"){
+            steps{
                 echo "Build File"
-                java demo
             }
         }
     }
